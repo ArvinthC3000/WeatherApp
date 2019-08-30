@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherApp</title>
+        <meta content="width= device-width, initial-Scale =1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="WeatherApp.js"></script>
+        <div class="main">
+            <div class="leftSide"><h1>Weather<span>App</span></div></h1>
+            <div class="rightSide">
+                <div class="margin"></div>
+                <div class="content">
+                    <div></div>
+                    <div class="city"><b>Bengaluru, Karnataka</b></div>
+                    <div class="now">
+                        <div class="date"></div>
+                        <div class="weather"></div>
+                    </div>
+                    <div class="report">
+                        <div class="degree"><b>23</b></div> <span><sup>
+                        <span class="celsius" onclick="">&#8451;</span>
+                        <span class="or">|</span>
+                        <span class="fahrenheit" onclick="">&#8457;</span></sup>
+                    </div></span>
+                    <div class="userInput">
+                        <div class="info">Enter City name</div>
+                        <div class="input">
+                            <input type="text" id="in" placeholder="Eg. City" list="datalist">
+                            <datalist id="datalist">
+                                <option value="Bangalore"></option>
+                                <option value="Chennai"></option>
+                                <option value="Coimbatore"></option>
+                                <option value="Delhi"></option>
+                                <option value="Patna"></option>
+                                <option value="Gurugram"></option>
+                                <option value="Mumbai"></option>
+                                <option value="Amaravati"></option>
+                                <option value="Jaipur"></option>
+                                <option value="Panaji"></option>
+                                <option value="Mysore"></option>
+                                <option value="Madurai"></option>
+                                <option value="Alleppey"></option>
+                                
+                            </datalist>
+                            <span><button type="submit">&#8594;</button></span>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="free"></div>                
+            </div>
+        </div>
+    </body>
+    
+
+</html>
