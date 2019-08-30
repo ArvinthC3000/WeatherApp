@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function getDate(){
+            var greet = new Date();
+            var h = greet.getHours();
+            var m = greet.getMinutes();
+            var s = greet.getSeconds();
+            m = digit(m);
+            s = digit(s);
+            document.getElementById('date').innerHTML = 
+            h + ":" + m + ":" + s ;
+    }
+    function digit(i){
+        if (i < 10) {i = "0" + i };
+        return i;
+    }
+    </script>
+
+<style>
+.background{
+    background-color:blue, aliceblue;
+    margin: -30%;
+    margin-left: -10%;
+}
+.general{
+    font-family:   sans-serif;
+    font-size: 1em;
+    margin-left : 35%;
+    margin-top: -5%;
+    /* border-style: solid; */
+    background-color: aqua;
+    padding-top: 4%;
+    
+}
+</style>
+</head>
+<body class="background general">
+    <form style="background-color: beige ; ">
+    <div style="padding: 10% 0 1% 5%">  
+    <h1 >Bengaluru, Karnataka</h1>
+    <div id="date" style="font-size : 1rem" ></div>
+</div>
+<div style="padding: 0 0 1% 5%">
+    <p style="font-size: 5rem; margin-top: -.3em ;margin-bottom: 5%">28 <sup> <sup><sup><sup>o</sup></sup></sup>c</sup></p>
+</div><br>
+<p style="padding: 0 0 1% 5%">Enter your city</p>
+<div style="padding: 0 0 15% 5%" > <form  action="" method="get">
+<form><!--<input type="text" placeholder="Eg.Austia" maxlength="50">-->
+<select style="padding: 1%" name="city" >
+    <option value="Eg.City" placeholder="Eg.city" disabled=" " selected>Eg.City</option>
+    <option value="Bangalore">Bangalore</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Hydrabad">Hydrabad</option>
+</select></form>
+</div>
+</body>
+</html>
