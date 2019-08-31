@@ -101,7 +101,7 @@ let date1= new Date();
     return i;
     }    
 
-    console.log(dayInStr +" "+h+":"+m+" "+meridiem)
+    // console.log(dayInStr +" "+h+":"+m+" "+meridiem)
     document.getElementsByClassName('date1')[0].innerHTML = dayInStr +" "+h+":"+m+":"+s+" "+meridiem;
 
     var t = setTimeout(date , 1000);
