@@ -5,7 +5,7 @@
         <meta content="width= device-width, initial-Scale =1.0">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onload="date()">
         <script src="WeatherApp.js"></script>
         <div class="main">
             <div class="leftSide"><h1>Weather<span>App</span></div></h1>
@@ -15,14 +15,14 @@
                     <div></div>
                     <div class="city"><b>Bengaluru, Karnataka</b></div>
                     <div class="now">
-                        <div class="date"></div>
-                        <div class="weather"></div>
+                        <div class="date1" >Day, Time</div>
+                        <div class="weather">Partly Cloudy ☁️</div>
                     </div>
                     <div class="report">
-                        <div class="degree"><b>23</b></div> <span><sup>
-                        <span class="celsius" onclick="">&#8451;</span>
+                        <div class="degree"><b>26</b></div> <span ><sup>
+                        <span id="myCursor" class="celsius" onclick="inCelsius()">&#8451;</span>
                         <span class="or">|</span>
-                        <span class="fahrenheit" onclick="">&#8457;</span></sup>
+                        <span id="myCursor" class="fahrenheit" onclick="inFahrenheit()">&#8457;</span></sup>
                     </div></span>
                     <div class="userInput">
                         <div class="info">Enter City name</div>
@@ -44,7 +44,9 @@
                                 <option value="Alleppey"></option>
                                 
                             </datalist>
-                            <span><button type="submit">&#8594;</button></span>
+                            <span>
+                                <button type="submit" onclick="process(document.getElementById('in').value)">&#8594;</button>
+                            </span>
                             <div></div>
                         </div>
                     </div>
