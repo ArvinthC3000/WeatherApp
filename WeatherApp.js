@@ -110,7 +110,7 @@ let date1= new Date();
 
 let arr = array;
 function process(value){
-    console.log(value);
+    // console.log(value);
     // document.getElementsByClassName("celsius").style.color = "#1890f0";
     // document.getElementsByClassName("fahrenheit").style.color = "#000000";
     arr = array.filter((i)=> {
@@ -127,8 +127,8 @@ arr = process();
 alert(arr);
 
 function inFahrenheit(){
-    console.log(arr);
-    console.log(array[0].degree);
+    // console.log(arr);
+    // console.log(array[0].degree);
     const celsius = arr[0].degree||array[0].degree;
     document.getElementsByClassName("celsius")[0].style.color = "#000000";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#1890f0";
@@ -142,5 +142,5 @@ function inCelsius(){
     document.getElementsByClassName("celsius")[0].style.color = "#1890f0";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#000000";
     document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
-    console.log(arr[0].degree);
+    // console.log(arr[0].degree);
 }
