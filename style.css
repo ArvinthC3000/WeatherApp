@@ -1,6 +1,7 @@
 body{
     margin: 0%;
 }
+/* Classes */
 .main{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,6 +68,8 @@ body{
     padding: .25em;
     font-size: 1em;  
 }
+
+/* IDs */
 #myCursor{
     cursor: pointer;
 }

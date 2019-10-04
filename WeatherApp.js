@@ -1,3 +1,4 @@
+// Golbal variables & Data
 const array = [
     {city:'Bangalore',
     state:'Karnataka',
@@ -66,6 +67,11 @@ const array = [
     image:'images/rainy.svg'}   
 ];
 
+
+let arr = [];
+
+
+// Event listeners
 document.addEventListener(onload, date());
 
 var input = document.getElementById("in");
@@ -74,7 +80,9 @@ input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     document.getElementById("submit").click();
   }
-});
+})
+
+// Functions
 function date(){
 let date1= new Date();
     let dayInNum = date1.getDay();
@@ -93,9 +101,8 @@ let date1= new Date();
     m = digit(m);
     s = digit(s);
     function digit(i){
-
-    if (i < 10) {i = "0" + i };
-    return i;
+        if (i < 10) {i = "0" + i };
+        return i;
     }    
 
     document.getElementsByClassName('date1')[0].innerHTML = dayInStr +" "+h+":"+m+":"+s+" "+meridiem;
@@ -104,7 +111,7 @@ let date1= new Date();
 }
 
 
-let arr = [];
+
 function process(value){
     arr = array.filter((i)=> {
         array[i]
@@ -116,8 +123,6 @@ function process(value){
         }
 
 }
-
-
 
 function inFahrenheit(){
     process();
