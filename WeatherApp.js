@@ -72,8 +72,7 @@ var input = document.getElementById("in");
 input.addEventListener("keyup", function(event) {
     
   if (event.keyCode === 13) {
-    // console.log(event)
-   document.getElementById("submit").click();
+    document.getElementById("submit").click();
   }
 });
 function date(){
@@ -119,7 +118,6 @@ function process(value){
 }
 
 
-// alert(arr);
 
 function inFahrenheit(){
     process();
