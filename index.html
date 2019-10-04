@@ -10,7 +10,7 @@ shows the weather conditions in user selecting location -->
         <meta content="width= device-width, initial-Scale =1.0">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="date()">
+    <body >
         <div class="main">
             <div class="leftSide"><h1>Weather<span>App</span></div></h1>
             <div class="rightSide">
@@ -49,7 +49,7 @@ shows the weather conditions in user selecting location -->
                                 
                             </datalist>
                             <span>
-                                <button type="submit" onclick="process(document.getElementById('in').value)">&#8594;</button>
+                                <button type="submit" id="submit" onclick="process(document.getElementById('in').value)">&#8594;</button>
                             </span>
                             <div></div>
                         </div>
@@ -60,5 +60,6 @@ shows the weather conditions in user selecting location -->
         </div>
     </body>
     <script src="WeatherApp.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 </html>

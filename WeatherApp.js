@@ -66,9 +66,8 @@ const array = [
     image:'images/rainy.svg'}   
 ];
 
-
+document.addEventListener(onload, date());
 function date(){
-    console.log('here')
 let date1= new Date();
     let dayInNum = date1.getDay();
     let dayArray =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -97,22 +96,28 @@ let date1= new Date();
 }
 
 
-let arr = array;
+let arr = [];
 function process(value){
     arr = array.filter((i)=> {
         array[i]
         return i.city===value;})
-    
+        console.log(arr)
+        if (arr.length >=1 ){
         document.getElementsByClassName("city")[0].innerHTML = "<b>"+arr[0].city +", "+ arr[0].state+"</b>";
         document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
         document.getElementsByClassName("weather")[0].innerHTML = arr[0].weather;
+        }
 
 }
-arr = process();
-alert(arr);
+
+
+console.log(array[0].city)
+// alert(arr);
 
 function inFahrenheit(){
-    const celsius = arr[0].degree||array[0].degree;
+    process();
+    console.log('here');
+    const celsius = array[0].degree || array[0].degree ||26;
     document.getElementsByClassName("celsius")[0].style.color = "#000000";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#1890f0";
     
@@ -122,7 +127,13 @@ function inFahrenheit(){
     
 }
 function inCelsius(){
+    process();
     document.getElementsByClassName("celsius")[0].style.color = "#1890f0";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#000000";
-    document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
+    if (arr.length >1 ){
+        document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
+        }
+    else{
+        document.getElementsByClassName("degree")[0].innerHTML = "<b>"+26+"</b>";
+    }
 }
