@@ -66,16 +66,6 @@ const array = [
     image:'images/rainy.svg'}   
 ];
 
-// let input = document.getElementById("in");
-// input.addEventListener("keydown", function(event) {
-//   if (event.keyCode === 13) {
-//    event.preventDefault();
-//    document.getElementById("button1").click();
-//   }
-// });
-// function myPointer(){
-//     document.getElementById("myCursor").style.cursor = pointer
-// }
 
 function date(){
     console.log('here')
@@ -101,7 +91,6 @@ let date1= new Date();
     return i;
     }    
 
-    // console.log(dayInStr +" "+h+":"+m+" "+meridiem)
     document.getElementsByClassName('date1')[0].innerHTML = dayInStr +" "+h+":"+m+":"+s+" "+meridiem;
 
     var t = setTimeout(date , 1000);
@@ -110,14 +99,10 @@ let date1= new Date();
 
 let arr = array;
 function process(value){
-    // console.log(value);
-    // document.getElementsByClassName("celsius").style.color = "#1890f0";
-    // document.getElementsByClassName("fahrenheit").style.color = "#000000";
     arr = array.filter((i)=> {
         array[i]
         return i.city===value;})
     
-        //console.log(arr);
         document.getElementsByClassName("city")[0].innerHTML = "<b>"+arr[0].city +", "+ arr[0].state+"</b>";
         document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
         document.getElementsByClassName("weather")[0].innerHTML = arr[0].weather;
@@ -127,8 +112,6 @@ arr = process();
 alert(arr);
 
 function inFahrenheit(){
-    // console.log(arr);
-    // console.log(array[0].degree);
     const celsius = arr[0].degree||array[0].degree;
     document.getElementsByClassName("celsius")[0].style.color = "#000000";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#1890f0";
@@ -142,5 +125,4 @@ function inCelsius(){
     document.getElementsByClassName("celsius")[0].style.color = "#1890f0";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#000000";
     document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
-    // console.log(arr[0].degree);
 }
