@@ -67,6 +67,15 @@ const array = [
 ];
 
 document.addEventListener(onload, date());
+
+var input = document.getElementById("in");
+input.addEventListener("keyup", function(event) {
+    
+  if (event.keyCode === 13) {
+    // console.log(event)
+   document.getElementById("submit").click();
+  }
+});
 function date(){
 let date1= new Date();
     let dayInNum = date1.getDay();
@@ -101,7 +110,6 @@ function process(value){
     arr = array.filter((i)=> {
         array[i]
         return i.city===value;})
-        console.log(arr)
         if (arr.length >=1 ){
         document.getElementsByClassName("city")[0].innerHTML = "<b>"+arr[0].city +", "+ arr[0].state+"</b>";
         document.getElementsByClassName("degree")[0].innerHTML = "<b>"+arr[0].degree+"</b>";
@@ -111,18 +119,15 @@ function process(value){
 }
 
 
-console.log(array[0].city)
 // alert(arr);
 
 function inFahrenheit(){
     process();
-    console.log('here');
     const celsius = array[0].degree || array[0].degree ||26;
     document.getElementsByClassName("celsius")[0].style.color = "#000000";
     document.getElementsByClassName("fahrenheit")[0].style.color = "#1890f0";
     
     const fahrenheit= Math.floor(celsius*1.8+32)
-    console.log(fahrenheit); 
     document.getElementsByClassName("degree")[0].innerHTML = "<b>"+fahrenheit+"</b>";
     
 }
